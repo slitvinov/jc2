@@ -14,7 +14,10 @@ $M.pdf: $M.tex $t $i
 png: $M.pdf
 	tool/pdfpng $M.pdf png
 
-.PHONY: clean png
+view: $M.pdf
+	llpp $M.pdf
+
+.PHONY: clean png view
 clean:
 	@echo clean
 	@rm -f $M.aux $M.log $M.nav $M.out $M.pdf $M.snm $M.toc
