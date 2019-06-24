@@ -7,7 +7,7 @@ set xtics (1)
 set ytics (0)
 set key off
 set xlabel "q/p"
-set ylabel "log(q/p)"
+set ylabel "-log(q/p)"
 
 s = 0.30
 set xrange [:2.4]
