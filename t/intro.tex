@@ -1,15 +1,41 @@
-\bframe{Lorenz system}
+\bframe{Var}
+
+Distributions $p(x) = m$, $p(x, z) = j$, $p(z | x) = c$, $\sum q = 1$, $\sum c = 1$, $q = q_+ q_- $
 
 \begin{equation*}
-j = m c, \quad \log m = \log j- \log c
+m = \frac{j}{c} = \frac{j/q}{c/q}
 \end{equation*}
 
 \begin{equation*}
-\log m = \log j/q - \log c/q
+\log m = \log \frac{j}{q} - \log \frac{c}{q}
 \end{equation*}
 
 \begin{equation*}
-\log m = \sum q \log j/q - \sum q \log c/q
+\log m = \sum q \log \frac{j}{q} - \sum q \log \frac{c}{q} = L(q, j) + KL(q, c)
+\end{equation*}
+
+\begin{equation*}
+L(q, j) = \sum_+ q_+  \sum_-  q_- \log j -  \sum_+ q_+  \log q_+
+\end{equation*}
+
+\begin{equation*}
+\log q_+^* = \sum_- q_- \log j   + const
+\end{equation*}
+
+\eframe
+
+\bframe{Var}
+
+\begin{equation*}
+q_+^* = \frac{ \exp( \sum_- q_- \log j)}{    \sum_+  \exp(\sum_- q_ - \log j) }
+\end{equation*}
+
+\begin{equation*}
+q_- = \delta(z_- - \theta)
+\end{equation*}
+
+\begin{equation*}
+q_+^* = \frac{ j(\theta, z_+)}{  \sum_+ j(\theta, z_+) } = c
 \end{equation*}
 
 \eframe
